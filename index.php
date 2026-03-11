@@ -146,13 +146,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <?php } ?>
             
               <?php if($_SESSION['level']=="guru"){ ?>
-
+              <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-              <p>Profil</p>
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Profil</p>
                 </a>
-                  </li>
+              </li>
 
               <li class="nav-item">
                 <a href="#" class="nav-link">
@@ -170,19 +170,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <?php } ?>
 
               <?php if($_SESSION['level']=="siswa"){ ?>
+              <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" class="nav-link">
-               <i class="far fa-circle nav-icon"></i>
-              <p>Profil</p>
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Profil</p>
                 </a>
-                  </li>
+              </li>
 
               <li class="nav-item">
-              <a href="#" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
+                <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
               <p>Jadwal</p>
-              </a>
-              </li>
+                </a>
+                  </li>
               <?php } ?>
 
               <nav class="mt-2">
