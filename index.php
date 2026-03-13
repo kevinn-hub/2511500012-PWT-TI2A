@@ -6,7 +6,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <?php
   session_start();
   require_once("config/koneksi.php");
-  if(isset($_SESSION["Username"]));
+  if(isset($_SESSION["Username"])){
   ?>
 <html lang="en">
 <head>
@@ -84,7 +84,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block"><?php echo $_SESSION['Username']; ?></a>
         </div>
       </div>
 
@@ -114,7 +114,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
           
-              <?php if($_SESSION['level']=="admin"){ ?>
+              <?php if($_SESSION['Role']=="admin"){ ?>
               <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" class="nav-link">
@@ -145,7 +145,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </li>
                 <?php } ?>
             
-              <?php if($_SESSION['level']=="guru"){ ?>
+              <?php if($_SESSION['Role']=="guru"){ ?>
               <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" class="nav-link">
@@ -169,7 +169,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </li>
               <?php } ?>
 
-              <?php if($_SESSION['level']=="siswa"){ ?>
+              <?php if($_SESSION['Role']=="siswa"){ ?>
               <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" class="nav-link">
@@ -306,5 +306,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </body>
 </html>
 <?php
-header("location:login.php");
+  } else {
+    echo"<meta http-equiv='refresh' content='0; url=login.php'>";
+  }
 ?>
