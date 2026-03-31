@@ -131,7 +131,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </li>
 
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="index.php?page=mapel" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
             <p>Mapel</p>
               </a>
@@ -253,7 +253,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <h5 class="card-title">Dashboard</h5>
 
                 <p class="card-text">
-                  Selamat datang di website sekolah saya
+                  <?php
+                  if(isset($_GET['page'])) {
+                    $page = $_GET['page'];
+                  } else {
+                    $page = "";
+                  }
+                  if ($page == "") {
+                    include "page/dashboard.php";
+                  } elseif (!file_exists("page/$page.php")) {
+                    echo "File Tidak Ditemukan";
+                  } else {
+                    include "page/$page.php";
+                  }
+                  ?>
                 </p>
 
               
