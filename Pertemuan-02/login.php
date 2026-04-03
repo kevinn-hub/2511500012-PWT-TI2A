@@ -77,7 +77,7 @@ if (isset($_POST['Username'])) {
     if (empty($Username) || empty($Password)) {
         echo "Data Tidak Boleh kosong";
     } else {
-        $userquery = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM users WHERE Username = '$Username' AND Password = '$Password'"));
+        $userquery = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tbl_users WHERE Username = '$Username' AND Password = '$Password'"));
         
         if ($userquery) {
             $_SESSION['Role'] = $userquery['Role'];
