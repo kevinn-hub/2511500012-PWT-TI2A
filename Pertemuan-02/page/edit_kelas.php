@@ -12,7 +12,7 @@
 <?php
 $id = $_GET['id'] ?? null;
 if (!$id) {
-    die("Kode mapel tidak ditemukan!");
+    die("Id Kelas tidak ditemukan!");
 }
 $edit = mysqli_fetch_array(mysqli_query($koneksi,"SELECT * FROM tbl_kelas WHERE id_kelas='$id'"));
 

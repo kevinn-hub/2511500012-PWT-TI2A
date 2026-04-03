@@ -117,7 +117,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <?php if($_SESSION['Role']=="admin"){ ?>
               <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="index.php?page=guru" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Guru</p>
                 </a>
