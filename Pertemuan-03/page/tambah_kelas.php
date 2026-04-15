@@ -12,12 +12,12 @@
 $carikode = mysqli_query($koneksi,"select max(id_kelas) from tbl_kelas") or die(mysqli_error());
 $datakode = mysqli_fetch_array($carikode);
 
- if($datakode[0]){
-      $kode = (int)$datakode[0] + 1; 
-      $hasilkode = str_pad($kode, 3, "0", STR_PAD_LEFT);
-  } else {
-      $hasilkode = str_pad(1, 3, "0", STR_PAD_LEFT); 
-  }
+ if($datakode){
+    $nilaikode = (int)($datakode[0]);
+    $kode = (int) $nilaikode;
+    $kode = $kode + 1 ;
+    $hasilkode = "".str_pad($kode, 3, "0", STR_PAD_LEFT);
+} else {$hasilkode = ""; }
 $_SESSION['KODE'] = $hasilkode;
 
 if(isset($_POST['tambah'])){
