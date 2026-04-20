@@ -23,12 +23,11 @@
 
     if(isset($_POST['tambah'])){
     $nis      = $_POST['nis'];
-    $id_user  = $_POST['id_user'];
     $nm_siswa = $_POST['nm_siswa'];
     $jenkel   = $_POST['jenkel'];
     $hp       = $_POST['hp'];
     $id_kelas = $_POST['id_kelas'];
-        $insert = mysqli_query($koneksi,"INSERT INTO tbl_siswa values ('$nis','$id_user','$nm_siswa','$jenkel','$hp','$id_kelas')");
+        $insert = mysqli_query($koneksi,"INSERT INTO tbl_siswa values ('$nis','$nm_siswa','$jenkel','$hp','$id_kelas')");
         $inserttbl_kelas = mysqli_query($koneksi,"INSERT INTO tbl_kelas (id_kelas, nm_kelas) VALUES ('$nis', '1234', 'siswa')");
         if ($insert) {
             echo '<div class="alert alert-info-dismissible">
@@ -83,7 +82,7 @@
                         <div class="form-group">
                             <label for="id_kelas">ID Kelas</label> 
                             <select class="form-control" name="id_kelas" id="id_kelas" placeholder="id kelas">
-                            <option value="" disabled selected> -- Pilih Id -- </option>
+                            <option value="" disabled selected> -- Pilih ID -- </option>
                             <?php
                             $getkelas = mysqli_query($koneksi,"SELECT * FROM tbl_kelas");
                             while ($returnkelas = mysqli_fetch_array($getkelas)) {
