@@ -23,13 +23,12 @@ $_SESSION['KODE'] = $hasilkode;
 
 if(isset($_POST['tambah'])){
   $kd_guru        = $_POST['kd_guru'];
-  $id_user        = $_POST['id_user'];
   $nm_guru        = $_POST['nm_guru'];
   $jenkel         = $_POST['jenkel'];
   $pend_terakhir  = $_POST['pend_terakhir'];
   $hp             = $_POST['hp'];
   $alamat         = $_POST['alamat'];
-    $insert = mysqli_query($koneksi,"INSERT INTO tbl_guru values ('$kd_guru','$id_user','$nm_guru','$jenkel','$pend_terakhir','$hp','$alamat')");
+    $insert = mysqli_query($koneksi,"INSERT INTO tbl_guru values ('$kd_guru', '$nm_guru','$jenkel','$pend_terakhir','$hp','$alamat')");
     $inserttbl_users = mysqli_query($koneksi,"INSERT INTO tbl_users (Username, Password, Role) values ('$kd_guru','1234', 'guru')");   
     if ($insert) {
         echo '<div class="alert alert-info-dismissible">
@@ -55,11 +54,6 @@ if(isset($_POST['tambah'])){
                     <div class="form-group">
                         <label for="kd_guru">Kode Guru</label>
                         <input type="text" name="kd_guru" value="<?= $hasilkode; ?>" placeholder="Kode Guru" class="form-control" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="id_user">ID User</label>
-                        <input type="int" name="id_user" id="id_user" placeholder="ID User" class="form-control">
                     </div>
 
                     <div class="form-group">

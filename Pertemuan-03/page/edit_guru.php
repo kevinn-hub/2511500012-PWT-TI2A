@@ -18,14 +18,13 @@ $edit = mysqli_fetch_array(mysqli_query($koneksi,"SELECT * FROM tbl_guru WHERE k
 
 if(isset($_POST['tambah'])){
   $kd_guru        = $_POST['kd_guru'];
-  $id_user        = $_POST['id_user'];
   $nm_guru        = $_POST['nm_guru'];
   $jenkel         = $_POST['jenkel'];
   $pend_terakhir  = $_POST['pend_terakhir'];
   $hp             = $_POST['hp'];
   $alamat         = $_POST['alamat'];
 
-    $insert = mysqli_query($koneksi,"UPDATE tbl_guru SET id_user='$id_user', nm_guru='$nm_guru', jenkel='$jenkel', pend_terakhir='$pend_terakhir',hp='$hp', alamat='$alamat' WHERE kd_guru='$kd' ");
+    $insert = mysqli_query($koneksi,"UPDATE tbl_guru SET  nm_guru='$nm_guru', jenkel='$jenkel', pend_terakhir='$pend_terakhir',hp='$hp', alamat='$alamat' WHERE kd_guru='$kd' ");
     if ($insert) {
         echo '<div class="alert alert-info-dismissible">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
@@ -51,11 +50,6 @@ if(isset($_POST['tambah'])){
                         <div class="form-group">
                             <label for="kd_guru">Kode Guru</label>
                             <input type="text" name="kd_guru" value="<?= $edit['kd_guru']; ?>"class="form-control" readonly>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="id_user">ID User</label>
-                            <input type="text" name="id_user" value="<?= $edit['id_user']; ?>" id="id_user" placeholder="ID User" class="form-control">
                         </div>
 
                         <div class="form-group">

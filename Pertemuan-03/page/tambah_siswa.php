@@ -28,7 +28,7 @@
     $hp       = $_POST['hp'];
     $id_kelas = $_POST['id_kelas'];
         $insert = mysqli_query($koneksi,"INSERT INTO tbl_siswa values ('$nis','$nm_siswa','$jenkel','$hp','$id_kelas')");
-        $inserttbl_kelas = mysqli_query($koneksi,"INSERT INTO tbl_kelas (id_kelas, nm_kelas) VALUES ('$nis', '1234', 'siswa')");
+        $inserttbl_kelas = mysqli_query($koneksi,"INSERT INTO tbl_kelas (id_kelas, nm_kelas) values ('$nis','1234', 'guru')"); 
         if ($insert) {
             echo '<div class="alert alert-info-dismissible">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
@@ -53,11 +53,6 @@
                         <div class="form-group">
                             <label for="nis">NIS</label>
                             <input type="text" name="nis" value="<?= $hasilkode; ?>" placeholder="NIS" class="form-control" readonly>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="id_user">ID User</label>
-                            <input type="int" name="id_user" id="id_user" placeholder="ID User" class="form-control">
                         </div>
 
                         <div class="form-group">
@@ -88,7 +83,7 @@
                             while ($returnkelas = mysqli_fetch_array($getkelas)) {
                             ?>
                             <option value="<?= $returnkelas['id_kelas'] ?>">
-                            <?= $returnkelas['nm_kelas'] ?>
+                            <?= $returnkelas['id_kelas'] ?>
                             </option>
                             <?php } ?>
                             </select>     

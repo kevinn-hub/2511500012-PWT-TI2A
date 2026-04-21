@@ -75,7 +75,7 @@ if(isset($_POST['tambah'])){
                             while ($returnkelas = mysqli_fetch_array($getkelas)) {
                             ?>
                             <option value="<?= $returnkelas['id_kelas'] ?>">
-                            <?= $returnkelas['nm_kelas'] ?>
+                            <?= $returnkelas['id_kelas'] ?>
                             </option>
                             <?php } ?>
                             </div>

@@ -34,7 +34,6 @@ if (isset($_GET['action'])) {
                     <tr>
                         <th>NO</th>
                         <th>KD GURU</th>
-                        <th>ID USER</th>
                         <th>NAMA GURU</th>
                         <th>JENIS KELAMIN</th>
                         <th>PENDIDIKAN TERAKHIR</th>
@@ -53,7 +52,6 @@ if (isset($_GET['action'])) {
                     <tr>
                         <td><?= $no; ?></td>
                         <td><?= $result['kd_guru']; ?></td>
-                        <td><?= $result['id_user']; ?></td>
                         <td><?= $result['nm_guru']; ?></td>
                         <td><?= $result['jenkel']; ?></td>
                         <td><?= $result['pend_terakhir']; ?></td>
