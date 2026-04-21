@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 05, 2026 at 12:08 PM
+-- Generation Time: Apr 21, 2026 at 10:06 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -31,7 +31,6 @@ USE `jadwal_guru`;
 
 CREATE TABLE `tbl_guru` (
   `kd_guru` varchar(5) NOT NULL,
-  `id_user` int(11) DEFAULT NULL,
   `nm_guru` varchar(50) DEFAULT NULL,
   `jenkel` varchar(10) DEFAULT NULL,
   `pend_terakhir` varchar(20) DEFAULT NULL,
@@ -43,8 +42,12 @@ CREATE TABLE `tbl_guru` (
 -- Dumping data for table `tbl_guru`
 --
 
-INSERT INTO `tbl_guru` (`kd_guru`, `id_user`, `nm_guru`, `jenkel`, `pend_terakhir`, `hp`, `alamat`) VALUES
-('G-001', 212133, 'sukendar', 'wanita', 'S1', '989898', 'jl selan');
+INSERT INTO `tbl_guru` (`kd_guru`, `nm_guru`, `jenkel`, `pend_terakhir`, `hp`, `alamat`) VALUES
+('G-001', 'sukendar', 'Laki-laki', 'Stara1', '3232232323', 'dfdf'),
+('G-002', 'dsf', 'Laki-laki', 'Stara2', '3434', 'fdf'),
+('G-003', 'ffd', 'Perempuan', 'Stara2', '2323', 'dfdf'),
+('G-004', 'asun', 'Laki-laki', 'Stara1', '089993', 'sungai selan'),
+('G-005', 'fdf', 'Laki-laki', 'Stara1', '3434', 'trtrt');
 
 -- --------------------------------------------------------
 
@@ -62,7 +65,11 @@ CREATE TABLE `tbl_kelas` (
 --
 
 INSERT INTO `tbl_kelas` (`id_kelas`, `nm_kelas`) VALUES
-(1, 'bahasa indonesia');
+(1, 'XXI'),
+(2, 'TI 1A'),
+(3, 'bahasa inggris'),
+(4, 'pagi'),
+(5, 'sore');
 
 -- --------------------------------------------------------
 
@@ -91,7 +98,6 @@ INSERT INTO `tbl_mapel` (`kd_mapel`, `nm_mapel`, `kkm`) VALUES
 
 CREATE TABLE `tbl_siswa` (
   `nis` varchar(10) NOT NULL,
-  `id_user` int(11) DEFAULT NULL,
   `nm_siswa` varchar(50) DEFAULT NULL,
   `jenkel` varchar(10) DEFAULT NULL,
   `hp` varchar(13) DEFAULT NULL,
@@ -102,8 +108,12 @@ CREATE TABLE `tbl_siswa` (
 -- Dumping data for table `tbl_siswa`
 --
 
-INSERT INTO `tbl_siswa` (`nis`, `id_user`, `nm_siswa`, `jenkel`, `hp`, `id_kelas`) VALUES
-('M-001', 212133, 'kepinnn', 'laki laki', '08899989', 67722);
+INSERT INTO `tbl_siswa` (`nis`, `nm_siswa`, `jenkel`, `hp`, `id_kelas`) VALUES
+('M-001', 'kepinnn', 'Laki-laki', '08899989', 1),
+('M-002', 'kepin', 'Perempuan', '656', 1),
+('M-003', 'livia', 'Laki-laki', '43434', 5),
+('M-004', 'kepinn', 'Perempuan', '3434', 3),
+('M-005', 'dfdf', 'Laki-laki', '08899989', 3);
 
 -- --------------------------------------------------------
 
@@ -124,8 +134,12 @@ CREATE TABLE `tbl_users` (
 
 INSERT INTO `tbl_users` (`Id_user`, `Username`, `Password`, `Role`) VALUES
 (1, 'admin', 'admin', 'admin'),
-(2, 'Guru', 'Guru', 'guru'),
-(3, 'Siswa', 'Siswa', 'siswa');
+(2, 'Guru', 'guru', 'guru'),
+(3, 'Siswa', 'Siswa', 'siswa'),
+(4, 'G-002', '1234', 'guru'),
+(5, 'G-003', '1234', 'guru'),
+(6, 'G-004', '1234', 'guru'),
+(7, 'G-005', '1234', 'guru');
 
 --
 -- Indexes for dumped tables
@@ -169,7 +183,7 @@ ALTER TABLE `tbl_users`
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
-  MODIFY `Id_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
