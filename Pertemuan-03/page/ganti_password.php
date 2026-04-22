@@ -9,22 +9,21 @@
 </div>
 
 <?php
-if (isset($_POST['ganti'])) {
-    $password_lama = $_POST['password_lama'];
-    $password_baru = $_POST['password_baru'];
+if (isset($_POST['tambah'])) {
+    $pw_lama = $_POST['password_lama'];
+    $pw_baru = $_POST['password_baru'];
     $konfirmasi = $_POST['konfirmasi'];
-
-    $username = $_SESSION['Username'];
+    $Username = $_SESSION['Username'];
 
     // Ambil password lama dari database
-    $query = mysqli_query($koneksi, "SELECT Password FROM tbl_users WHERE Username='$username'");
-    $user = mysqli_fetch_array($query);
+    $query = mysqli_query($koneksi, "SELECT Password FROM tbl_users WHERE Username='$Username'")or die(mysqli_error($koneksi));
+    $cek = mysqli_fetch_array($query);
 
-    if ($user) {
-        if ($password_lama == $user['Password']) {
-            if ($password_baru == $konfirmasi) {
+    if ($cek) {
+        if ($pw_lama == $cek['Password']) {
+            if ($pw_baru == $konfirmasi) {
                 // Update password
-                $update = mysqli_query($koneksi, "UPDATE tbl_users SET Password='$password_baru' WHERE Username='$username'");
+                $update = mysqli_query($koneksi, "UPDATE tbl_users SET Password='$pw_baru' WHERE  Password='$pw_lama' ")or die(mysqli_error($koneksi));
                 if ($update) {
                     echo '<div class="alert alert-success alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -81,7 +80,7 @@ if (isset($_POST['ganti'])) {
                             <input type="password" name="konfirmasi" id="konfirmasi" class="form-control" required>
                         </div>
                         <div class="card-footer">
-                            <input type="submit" class="btn btn-primary" name="ganti" value="Ganti Password">
+                            <input type="submit" class="btn btn-primary" name="tambah" value="Ganti Password">
                         </div>
                     </form>
                 </div>
@@ -89,3 +88,4 @@ if (isset($_POST['ganti'])) {
         </div>
     </div>
 </section>
+
