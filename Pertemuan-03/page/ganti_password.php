@@ -14,7 +14,6 @@ if(isset($_POST['tambah'])){
     $pw_lama = $_POST['password_lama'];
     $pw_baru = $_POST['password_baru'];
     $konfirmasi = $_POST['konfirmasi'];
-
     $Username = $_SESSION['Username'];
 
         if($pw_baru != $konfirmasi){
@@ -34,7 +33,7 @@ if(isset($_POST['tambah'])){
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 <h5><i class="icon fas fa-check"></i> Sukses</h5>
                 <h4>Password berhasil diubah</h4></div>';
-
+                echo "<script>window.location='index.php';</script>";
             } else {
             echo '<div class="alert alert-danger alert-dismissible">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
