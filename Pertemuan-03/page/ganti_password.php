@@ -33,7 +33,7 @@ if(isset($_POST['tambah'])){
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 <h5><i class="icon fas fa-check"></i> Sukses</h5>
                 <h4>Password berhasil diubah</h4></div>';
-                echo "<script>window.location='index.php';</script>";
+                echo '<meta http-equiv="refresh" content="1;url=index.php">';
             } else {
             echo '<div class="alert alert-danger alert-dismissible">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
