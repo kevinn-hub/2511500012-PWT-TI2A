@@ -27,9 +27,10 @@ if(isset($_POST['tambah'])){
       if($cek){
 
         $update = mysqli_query($koneksi, "UPDATE tbl_users SET Password = '$pw_baru' WHERE Password = '$pw_lama' AND Username = '$Username'");
-
+        $affected_rows = mysqli_affected_rows($koneksi);
+        
             if($update){
-                if (mysqli_affected_rows($koneksi) > 0) {
+                if ($affected_rows > 0) {
                      echo'<div class="alert alert-success alert-dismissible">
                           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                           <h5><i class="icon fas fa-check"></i> Sukses</h5>
