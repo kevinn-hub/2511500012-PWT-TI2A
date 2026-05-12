@@ -143,6 +143,13 @@
               <p>kelas</p>
                 </a>
                   </li>
+
+              <li class="nav-item">
+                <a href="index.php?page=ekstra_2511500012" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+              <p>Ekstrakulikuler</p>
+                </a>
+                  </li>
                   <?php } ?>
               
                 <?php if($_SESSION['Role']=="guru"){ ?>
