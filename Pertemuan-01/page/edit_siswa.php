@@ -58,7 +58,11 @@ if(isset($_POST['tambah'])){
 
                         <div class="form-group">
                             <label for="jenkel">Jenis Kelamin</label>
-                            <input type="text" name="jenkel" value="<?= $edit['jenkel']; ?>" id="jenkel" placeholder="L/P" class="form-control">
+                                <select class="form-control" type="text" name="jenkel" value="<?= $edit['jenkel']; ?>" id="jenkel" placeholder="L/P">
+                                    <option disable selected>-- Jenis Kelamin --</option>
+                                    <option value="laki-laki">laki-laki</option>
+                                    <option value="perempuan">perempuan</option>
+                                </select>
                         </div>
 
                         <div class="form-group">

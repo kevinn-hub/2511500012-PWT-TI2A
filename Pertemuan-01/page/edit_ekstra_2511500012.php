@@ -66,16 +66,31 @@ if(isset($_POST['tambah'])){
                         <label for="semester_012">SEMESTER_012</label>
                         <select class ="form-control" type="int" name="semester_012" value="<?= $edit['semester_012']; ?>" id="semester_012" placeholder="SEMESTER_012">
                         <option disable selected>-- Pilih jenis semester --</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
+                        <option value="1"
+                        <?= ($edit['semester_012'] == 1) ? 'selected' : '' ?>>
+                            1
+                        </option>
+
+                        <option value="2"
+                        <?= ($edit['semester_012'] == 2) ? 'selected' : '' ?>>
+                            2
+                        </option>
                         </select>
+                    </div>
 
                     <div class="form-group">
                         <label for="thn_ajaran_012">thn_ajaran_012</label>
                         <select class ="form-control" type="int" class="form-control" name="thn_ajaran_012" value="<?= $edit['thn_ajaran_012']; ?>"  id="thn_ajaran_012" placeholder="SEMESTER_012">
                         <option disable selected>-- Pilih tahun ajaran --</option>
-                        <option value="2012">2012</option>
-                        <option value="2013">2013</option>
+                        <option value="2012"
+                        <?= ($edit['thn_ajaran_012'] == 2012) ? 'selected' : '' ?>>
+                        2012
+                        </option>
+
+                        <option value="2013"
+                        <?= ($edit['thn_ajaran_012'] == 2013) ? 'selected' : '' ?>>
+                        2013
+                        </option>
                         </select>
                     </div>
                     

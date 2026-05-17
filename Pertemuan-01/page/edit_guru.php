@@ -59,13 +59,45 @@ if(isset($_POST['tambah'])){
 
                         <div class="form-group">
                             <label for="jenkel">Jenis Kelamin</label>
-                            <input type="text" name="jenkel" value="<?= $edit['jenkel']; ?>" id="jenkel" placeholder="L/P" class="form-control">
+                                <select class="form-control" type="text" name="jenkel" value="<?= $edit['jenkel']; ?>" id="jenkel" placeholder="L/P">
+                                    <option disable selected>-- Jenis Kelamin --</option>
+                                    <option value="laki-laki"
+                                    <?= ($edit['jenkel'] == 'laki-laki') ? 'selected' : '' ?>>
+                                    laki-laki
+                                    </option>
+                                    <option value="perempuan"
+                                    <?= ($edit['jenkel'] == 'perempuan') ? 'selected' : '' ?>>
+                                    perempuan
+                                    </option>
+                                </select>
                         </div>
 
                         <div class="form-group">
-                              <label for="pend_terakhir">Pendidikan Terakhir</label>
-                              <input type="text" name="pend_terakhir" value="<?= $edit['pend_terakhir']; ?>" id="pend_terakhir" placeholder="Pendidikan Terakhir" class="form-control">
-                          </div>
+                            <label for="pend_terakhir">PENDIDIKAN TERAKHIR</label>
+                                <select class ="form-control" type="int" name="pend_terakhir" value="<?= $edit['pend_terakhir']; ?>" id="pend_terakhir" placeholder="Pendidikan Terakhir">
+                                    <option disable selected>-- Pendidikan Terakhir --</option>
+                                        <option value="Stara1"
+                                        <?= ($edit['pend_terakhir'] == 'Stara1') ? 'selected' : '' ?>>
+                                        Stara 1
+                                        </option>
+                                        <option value="Stara2"
+                                        <?= ($edit['pend_terakhir'] == 'Stara2') ? 'selected' : '' ?>>
+                                        Stara 2
+                                        </option>
+                                        <option value="Stara3"
+                                        <?= ($edit['pend_terakhir'] == 'Stara3') ? 'selected' : '' ?>>
+                                        Stara 3
+                                        </option>
+                                        <option value="Diploma3"
+                                        <?= ($edit['pend_terakhir'] == 'Diploma3') ? 'selected' : '' ?>>
+                                        Diploma 3
+                                        </option>
+                                        <option value="Diploma4"
+                                        <?= ($edit['pend_terakhir'] == 'Diploma4') ? 'selected' : '' ?>>
+                                        Diploma 4
+                                        </option>
+                                </select>
+                        </div>
 
                         <div class="form-group">
                             <label for="hp">HP</label>

@@ -68,20 +68,20 @@ if(isset($_POST['tambah'])){
 
                     <div class="form-group">
                         <label for="semester_012">SEMESTER_012</label>
-                        <select class ="form-control" type="int" class="form-control" name="semester_012" id="semester_012" placeholder="SEMESTER_012">
-                        <option disable selected>-- Pilih jenis semester --</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        </select>
+                            <select class ="form-control" type="int" class="form-control" name="semester_012" id="semester_012" placeholder="SEMESTER_012">
+                                <option disable selected>-- Pilih jenis semester --</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
                     </div>
 
                     <div class="form-group">
                         <label for="thn_ajaran_012">thn_ajaran_012</label>
-                        <select class ="form-control" type="int" class="form-control" name="thn_ajaran_012" id="thn_ajaran_012" placeholder="SEMESTER_012">
-                        <option disable selected>-- Pilih tahun ajaran --</option>
-                        <option value="2012">2012</option>
-                        <option value="2013">2013</option>
-                        </select>
+                            <select class ="form-control" type="int" class="form-control" name="thn_ajaran_012" id="thn_ajaran_012" placeholder="SEMESTER_012">
+                                <option disable selected>-- Pilih tahun ajaran --</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                            </select>
                     </div>
                     
                         <div class="card-footer">

@@ -73,14 +73,14 @@ if(isset($_POST['tambah'])){
 
                     <div class="form-group">
                         <label for="pend_terakhir">Pendidikan Terakhir</label>
-                        <select class="form-control" type="text" name="pend_terakhir" id="pend_terakhir" placeholder="Pendidikan terakhir">
-                        <option disable selected>-- Pilih jenis pendidikan --</option>
-                        <option value="Stara1">Stara 1</option>
-                        <option value="Stara2">Stara 2</option>
-                        <option value="Stara3">Stara 3</option>
-                        <option value="Diploma3">Diploma 3</option>
-                        <option value="Diploma4">Diploma 4</option>
-                        </select>
+                            <select class="form-control" type="text" name="pend_terakhir" id="pend_terakhir" placeholder="Pendidikan terakhir">
+                                <option disable selected>-- Pilih jenis pendidikan --</option>
+                                <option value="Stara1">Stara 1</option>
+                                <option value="Stara2">Stara 2</option>
+                                <option value="Stara3">Stara 3</option>
+                                <option value="Diploma3">Diploma 3</option>
+                                <option value="Diploma4">Diploma 4</option>
+                            </select>
                     </div>
 
                     <div class="form-group">

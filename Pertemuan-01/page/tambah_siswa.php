@@ -62,11 +62,11 @@
 
                         <div class="form-group">
                             <label for="jenkel">Jenis Kelamin</label>
-                            <select class="form-control" name="jenkel" id="jenkel" placeholder="jenkel">
-                            <option disable selected>-- Pilih jenis kelamin --</option>
-                            <option value="Laki-laki">Laki-laki</option>
-                            <option value="Perempuan">Perempuan</option>
-                            </select>
+                                <select class="form-control" name="jenkel" id="jenkel" placeholder="jenkel">
+                                    <option disable selected>-- Pilih jenis kelamin --</option>
+                                    <option value="Laki-laki">Laki-laki</option>
+                                    <option value="Perempuan">Perempuan</option>
+                                </select>
                         </div>
 
                         <div class="form-group">
