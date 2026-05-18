@@ -79,10 +79,10 @@ if (isset($_GET['action'])) {
                               ON tbl_mapel.kd_mapel = tbl_detail_jadwal.kd_mapel
                           JOIN tbl_guru 
                               ON tbl_guru.kd_guru = tbl_detail_jadwal.kd_guru
-                              
+                              WHERE tbl_jadwal_kelas.id_jadwal = '$id'
                               ORDER BY tbl_detail_jadwal.id_detail ASC");
                 while ($result = mysqli_fetch_array($query)) {
-                    $no++
+                    $no++;
                 ?>
                 <tbody>
                     <tr>
