@@ -83,12 +83,7 @@ if(isset($_POST['tambah'])){
                                     </option>
                                 <?php } ?>
                             </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nm_mapel">Nm Mapel</label>
-                            <input type="text" name="nm_mapel" value="<?= $hasilkode; ?>" placeholder="nama mapel" class="form-control">
-                        </div>  
+                        </div> 
 
                         <div class="form-group">
                         <label>Kd Guru</label>
