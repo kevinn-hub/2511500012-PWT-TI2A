@@ -145,8 +145,17 @@ if(isset($_POST['tambah'])){
         </div>
 
             <div class="col-md-3">
-            <input type="text" name="kelas[]" class="form-control" placeholder="Kelas" required>
+            <select name="kelas[]" class="form-control" required>
+            <option selected disabled>-- Pilih Kelas --</option>
+            <?php
+            $dataKelas = mysqli_query($koneksi,"SELECT * FROM tbl_kelas");
+            while($k = mysqli_fetch_assoc($dataKelas)){
+            echo "<option value='".$k['nm_kelas']."'>".$k['nm_kelas']."</option>";
+            }
+            ?>
+            </select>
             </div>
+
         </div>
         </div>
         <button type="button" class="btn btn-info" onclick="tambahBaris()">+ Tambah Mapel</button>
